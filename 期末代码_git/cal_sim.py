@@ -116,8 +116,6 @@ def map_resume_to_job(row):
     return mapped_data
 
 # 应用 map_resume_to_job 函数
-mapped_resumes = resume_data.apply(map_resume_to_job, axis=1)
-mapped_df = pd.DataFrame(mapped_resumes.tolist())
 
 
 # @st.cache_data
@@ -160,7 +158,4 @@ def compute_matching_weights(job_data, resume_data):
     final_scores_df = pd.DataFrame(final_scores, index=job_data['ID'], columns=resume_data['ID'])
     return final_scores_df
 
-final_scores = compute_matching_weights(random_sampled_jobs, mapped_df)
-
-final_scores.to_csv('resume_job_matching_scores.csv', index=False)
 
