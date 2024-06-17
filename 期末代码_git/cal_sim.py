@@ -8,11 +8,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 import os
 import random
 
-job_data = pd.read_csv('job_data_with_id.csv')  
-resume_data = pd.read_csv('resume_dataset_with_id.csv')
-# random_sampled_jobs = job_data.sample(n=147, random_state=1).reset_index(drop=True)
-# random_sampled_jobs.to_csv('random_sampled_jobs.csv', index=False)
-random_sampled_jobs = pd.read_csv('random_sampled_jobs.csv')
 
 ###############################################################抽取特征##########################################################3
 def preprocess_text(text):
