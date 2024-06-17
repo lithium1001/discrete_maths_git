@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from time import time
 from KM import kuhn_munkres
+import sklearn
 from cal_sim import compute_matching_weights
 
 st.set_page_config(page_title="Job-Resume Matching System", page_icon=":bar_chart:", layout="wide")
