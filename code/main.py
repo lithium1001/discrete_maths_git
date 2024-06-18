@@ -9,11 +9,11 @@ st.set_page_config(page_title="Job-Resume Matching System", page_icon=":bar_char
 
 # 初始化会话状态中的数据集
 if 'resume_data' not in st.session_state:
-    st.session_state.resume_data = pd.read_csv('https://github.com/lithium1001/discrete_maths_git/tree/06d1a92063073e6756795d02a50768fc89646bc8/%E6%9C%9F%E6%9C%AB%E4%BB%A3%E7%A0%81_git/data/mapped_resume_dataset.csv')
+    st.session_state.resume_data = pd.read_csv('data/mapped_resume_dataset.csv')
 if 'job_data' not in st.session_state:
-    st.session_state.job_data = pd.read_csv('https://github.com/lithium1001/discrete_maths_git/tree/06d1a92063073e6756795d02a50768fc89646bc8/%E6%9C%9F%E6%9C%AB%E4%BB%A3%E7%A0%81_git/data/job_data_with_id.csv')
+    st.session_state.job_data = pd.read_csv('data/job_data_with_id.csv')
 if 'random_sampled_jobs' not in st.session_state:
-    st.session_state.random_sampled_jobs = pd.read_csv('https://github.com/lithium1001/discrete_maths_git/tree/06d1a92063073e6756795d02a50768fc89646bc8/%E6%9C%9F%E6%9C%AB%E4%BB%A3%E7%A0%81_git/data/random_sampled_jobs.csv')
+    st.session_state.random_sampled_jobs = pd.read_csv('data/random_sampled_jobs.csv')
 
 resume_data = st.session_state.resume_data
 job_data = st.session_state.job_data
