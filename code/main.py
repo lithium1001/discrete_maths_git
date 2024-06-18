@@ -4,8 +4,14 @@ from time import time
 from KM import kuhn_munkres
 import sklearn
 from cal_sim import compute_matching_weights
+import os
 
 st.set_page_config(page_title="Job-Resume Matching System", page_icon=":bar_chart:", layout="wide")
+# 获取当前脚本的路径
+current_script_path = os.path.abspath(__file__)
+
+# 打印路径
+print(f"The path of this script is: {current_script_path}")
 
 # 初始化会话状态中的数据集
 if 'resume_data' not in st.session_state:
