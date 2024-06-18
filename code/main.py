@@ -7,19 +7,26 @@ from cal_sim import compute_matching_weights
 import os
 
 st.set_page_config(page_title="Job-Resume Matching System", page_icon=":bar_chart:", layout="wide")
-# 获取当前脚本的路径
-current_script_path = os.path.abspath(__file__)
+# 获取当前脚本的目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# 打印路径
-print(f"The path of this script is: {current_script_path}")
+# 构造相对路径
+csv_file_path1 = os.path.join(current_dir, 'data', 'mapped_resume_dataset.csv')
+csv_file_path2 = os.path.join(current_dir, 'data', 'job_data_with_id.csv')
+csv_file_path3 = os.path.join(current_dir, 'data', 'random_sampled_jobs.csv')
+
+print(csv_file_path1)
+print(csv_file_path2)
+print(csv_file_path3)
+
 
 # 初始化会话状态中的数据集
 if 'resume_data' not in st.session_state:
-    st.session_state.resume_data = pd.read_csv('/mount/src/discrete_maths_git/data/mapped_resume_dataset.csv')
+    st.session_state.resume_data = pd.read_csv(csv_file_path1)
 if 'job_data' not in st.session_state:
-    st.session_state.job_data = pd.read_csv('/mount/src/discrete_maths_git/data/job_data_with_id.csv')
+    st.session_state.job_data = pd.read_csv(csv_file_path2)
 if 'random_sampled_jobs' not in st.session_state:
-    st.session_state.random_sampled_jobs = pd.read_csv('/mount/src/discrete_maths_git/data/random_sampled_jobs.csv')
+    st.session_state.random_sampled_jobs = pd.read_csv(csv_file_path3)
 
 resume_data = st.session_state.resume_data
 job_data = st.session_state.job_data
