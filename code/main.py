@@ -11,9 +11,9 @@ st.set_page_config(page_title="Job-Resume Matching System", page_icon=":bar_char
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 # 构造相对路径
-csv_file_path1 = os.path.join(current_dir, 'data', 'mapped_resume_dataset.csv')
-csv_file_path2 = os.path.join(current_dir, 'data', 'job_data_with_id.csv')
-csv_file_path3 = os.path.join(current_dir, 'data', 'random_sampled_jobs.csv')
+csv_file_path1 = os.path.join(current_dir,  'mapped_resume_dataset.csv')
+csv_file_path2 = os.path.join(current_dir,  'job_data_with_id.csv')
+csv_file_path3 = os.path.join(current_dir,  'random_sampled_jobs.csv')
 
 print(csv_file_path1)
 print(csv_file_path2)
