@@ -15,11 +15,11 @@ print(f"The path of this script is: {current_script_path}")
 
 # 初始化会话状态中的数据集
 if 'resume_data' not in st.session_state:
-    st.session_state.resume_data = pd.read_csv('mapped_resume_dataset.csv')
+    st.session_state.resume_data = pd.read_csv('/mount/src/discrete_maths_git/data/mapped_resume_dataset.csv')
 if 'job_data' not in st.session_state:
-    st.session_state.job_data = pd.read_csv('job_data_with_id.csv')
+    st.session_state.job_data = pd.read_csv('/mount/src/discrete_maths_git/data/job_data_with_id.csv')
 if 'random_sampled_jobs' not in st.session_state:
-    st.session_state.random_sampled_jobs = pd.read_csv('random_sampled_jobs.csv')
+    st.session_state.random_sampled_jobs = pd.read_csv('/mount/src/discrete_maths_git/data/random_sampled_jobs.csv')
 
 resume_data = st.session_state.resume_data
 job_data = st.session_state.job_data
